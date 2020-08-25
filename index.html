@@ -100,17 +100,28 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="MADE - Show da Banda" startnode="1" creator="Twine" creator-version="2.3.9" ifid="2445516A-79B8-4E65-A53F-C6C5FD0CD14A" zoom="1" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#input-error {
+	<tw-storydata name="MADE - Show da Banda" startnode="1" creator="Twine" creator-version="2.3.9" ifid="2445516A-79B8-4E65-A53F-C6C5FD0CD14A" zoom="1" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#input-error,
+#input-error2,
+#input-error3,
+#input-error4,
+#input-error5,
+#input-error6 {
 	color: red;
 	margin-left: 2em;
 }
 
-#input-error2 {
+#respostaMeuGrupo,
+#respostaOutroGrupo,
+#respostaEstilo {
 	color: red;
 	margin-left: 2em;
 }
 
-#input-error3 {
+#gabarito,
+#gabarito2,
+#gabarito3,
+#resposta,
+#resposta2 {
 	color: red;
 	margin-left: 2em;
 }
@@ -141,29 +152,24 @@ Escolha o estilo musical que você prefere:
 [[Rock,]]
 [[MPB,]]
 [[Forró,]]
-[[Música Clássica.]]</tw-passagedata><tw-passagedata pid="2" name="Rock," tags="" position="350,250" size="100,100">&#39;&#39;Era a primeira vez que a banda:&#39;&#39;
-&lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome da banda&quot;&gt;&gt;
-
-&lt;&lt;button &quot;Continuar&quot;&gt;&gt;
+[[Música Clássica.]]</tw-passagedata><tw-passagedata pid="2" name="Rock," tags="" position="350,250" size="100,100">Era a primeira vez que a banda &lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome da banda&quot;&gt;&gt;&lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $NomeBanda to $NomeBanda.trim()&gt;&gt;
 
-	&lt;&lt;if $NomeBanda is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $NomeBanda is &quot;inserir nome da banda&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da banda.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/button&gt;&gt;@@#input-error;@@
-
-faria show aqui em Fortaleza. Seria na Praça Verde, que fica perto do Dragão do Mar. 
+&lt;&lt;/button&gt;&gt;@@#input-error;@@faria show aqui em Fortaleza. Seria na Praça Verde, que fica perto do Dragão do Mar. 
 
 Nunca imaginei que eles iriam fazer algum show por aqui, pois eram uma banda recente, pouco conhecida. 
 
-&#39;&#39;Até eu descobri por acaso,&#39;&#39;
-&lt;&lt;textbox &quot;$Acaso&quot; &quot;inserir como você descobriu a banda&quot;&gt;&gt;
+Até que eu descobri, por acaso,
+&lt;&lt;textarea &quot;$Acaso&quot; &quot;inserir como você descobriu a banda&quot;&gt;&gt;
 
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Acaso to $Acaso.trim()&gt;&gt;
 
-	&lt;&lt;if $Acaso is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Acaso is &quot;inserir como você descobriu a banda&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, diga como você conheceu a banda.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
@@ -189,19 +195,14 @@ Nesse dia, fiquei freneticamente atualizando a página para não perder a oportu
 
 Quatro amigos meus também fizeram um esforço - pediram aos pais ou venderam alguma coisa - para comprar os ingressos. Combinamos ir juntos no dia.
 
-[[Finalmente o dia do show chegou.]]</tw-passagedata><tw-passagedata pid="3" name="MPB," tags="" position="550,250" size="100,100">&#39;&#39;Era a primeira vez que:&#39;&#39;
-&lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome do cantor ou da banda&quot;&gt;&gt;
-
-&lt;&lt;button &quot;Continuar&quot;&gt;&gt;
+[[Finalmente o dia do show chegou.]]</tw-passagedata><tw-passagedata pid="3" name="MPB," tags="" position="550,250" size="100,100">Era a primeira vez que &lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome do cantor ou da banda&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $NomeBanda to $NomeBanda.trim()&gt;&gt;
 
-	&lt;&lt;if $NomeBanda is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $NomeBanda is &quot;inserir nome do cantor ou da banda&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da banda.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/button&gt;&gt;@@#input-error;@@
-
-faria show aqui em Fortaleza. Seria no Aterro da Praia de Iracema, do outro lado da cidade, no Réveillon. Eu ainda era muito novo e meus pais provavelmente não deixariam eu ir sozinho para o show.
+&lt;&lt;/button&gt;&gt;@@#input-error;@@ faria show aqui em Fortaleza. Seria no Aterro da Praia de Iracema, do outro lado da cidade, no Réveillon. Eu ainda era muito novo e meus pais provavelmente não deixariam eu ir sozinho para o show.
 
 Ainda assim, eu pensei no exato momento em que vi o post: “Não importa como, eu tenho que ir pra esse show!”
 
@@ -209,36 +210,32 @@ E assim eu fiz.
 
 Conversei com meus pais pedindo permissão para ir ao show. Como eu pensei, eles não deixaram. Eles disseram que era muito perigoso, que tinha visto uma reportagem em que um casal tinha sido roubado e ficado só de roupas íntima.  
 
-&#39;&#39;Diga alguns motivos que seus pais diriam para você não ir para algum lugar:&#39;&#39;
-&lt;&lt;textbox &quot;$Motivos&quot; &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt;
-
+Diga alguns motivos que seus pais diriam para você não ir para algum lugar:
+&lt;&lt;textarea &quot;$Motivos&quot; &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt;
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Motivos to $Motivos.trim()&gt;&gt;
 
-	&lt;&lt;if $Motivos is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Motivos is &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, diga algum motivo.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@#input-error2;@@
 
-&#39;&#39;Pensei em alguma forma de convencê-los a aceitar a minha ideia. Então, pensei em chamar:&#39;&#39;
-&lt;&lt;textbox &quot;$Nome&quot; &quot;inserir nome da pessoa&quot;&gt;&gt;
-
-&lt;&lt;button &quot;Continuar&quot;&gt;&gt;
+Pensei em alguma forma de convencê-los a aceitar a minha ideia. Então, pensei em chamar &lt;&lt;textbox &quot;$Nome&quot; &quot;inserir nome da pessoa&quot;&gt;&gt;&lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Nome to $Nome.trim()&gt;&gt;
 
-	&lt;&lt;if $Nome is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Nome is &quot;inserir nome da pessoa&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, diga o nome da pessoa.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/button&gt;&gt;@@#input-error3;@@
-
-em que poderia me ajudar nessa situação. Ele(ela) já era maior de idade e meus pais o(a) respeitavam bastante. Conversei com ele(ela) e aceitou na hora o meu pedido. 
+&lt;&lt;/button&gt;&gt;@@#input-error3;@@ que poderia me ajudar nessa situação. Ele(ela) já era maior de idade e meus pais o(a) respeitavam bastante. Conversei com ele(ela) e aceitou na hora o meu pedido. 
 
 Um problema já estava resolvido. Faltava apenas o dinheiro para pagar o uber na ida e comprar alguma coisa para comer por lá. Juntei alguns brinquedos velhos e uns livros que eu tinha em casa e consegui vendê-los. No total, consegui oitenta reais.
-[[Achei o suficiente, pois nós dois iríamos rachar o valor do uber e talvez voltaríamos pra casa de ônibus mesmo, de manhã.]]</tw-passagedata><tw-passagedata pid="4" name="Forró," tags="" position="750,250" size="100,100">&#39;&#39;Na época, eu ainda faria 16 anos e, um mês depois do meu aniversário, aconteceria uma festa inédita :&#39;&#39; &lt;&lt;textbox &quot;$Festa&quot; &quot;inserir nome do evento aqui&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Festa to $Festa.trim()&gt;&gt; &lt;&lt;if $Festa is &quot;inserir nome do evento aqui&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da festa. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@, &#39;&#39;comemorando 20 anos da minha banda favorita de forró:&#39;&#39; &lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome da banda&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $NomeBanda to $NomeBanda.trim()&gt;&gt; &lt;&lt;if $NomeBanda is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque o nome da banda. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ 
+[[Achei o suficiente, pois nós dois iríamos rachar o valor do uber e talvez voltaríamos pra casa de ônibus mesmo, de manhã.]]</tw-passagedata><tw-passagedata pid="4" name="Forró," tags="" position="750,250" size="100,100">Na época, eu ainda faria 16 anos e, um mês depois do meu aniversário, aconteceria uma festa inédita: &lt;&lt;textbox &quot;$Festa&quot; &quot;inserir nome do evento aqui&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Festa to $Festa.trim()&gt;&gt; &lt;&lt;if $Festa is &quot;inserir nome do evento aqui&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da festa. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@, comemorando 20 anos da minha banda favorita de forró, &lt;&lt;textbox &quot;$NomeBanda&quot; &quot;inserir nome da banda&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $NomeBanda to $NomeBanda.trim()&gt;&gt; &lt;&lt;if $NomeBanda is &quot;inserir nome da banda&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque o nome da banda. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ 
 
-&#39;&#39;Para isso, eles convidaram outros artistas, por exemplo:&#39;&#39; &lt;&lt;textbox &quot;$Lista&quot; &quot;inserir lista de bandas&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Lista to $Lista.trim()&gt;&gt; &lt;&lt;if $Banda is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque a lista de bandas. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
+Para isso, eles convidaram outros artistas, por exemplo:
+&lt;&lt;textarea &quot;$Lista&quot; &quot;inserir lista de bandas&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Lista to $Lista.trim()&gt;&gt; &lt;&lt;if $Lista is &quot;inserir lista de bandas&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque a lista de bandas. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
 O evento seria aqui em Fortaleza, no Castelão, um pouco longe da minha casa. 
 
 Então eu pensei no exato momento em que vi o post: “Não importa como, eu tenho que ir pra esse show!”
@@ -260,8 +257,11 @@ Nesse dia, fiquei freneticamente atualizando a página para não perder a oportu
 Quatro amigos meus também fizeram um esforço - pediram aos pais ou venderam alguma coisa - para comprar os ingressos. Combinamos ir juntos no dia.
 
 [[Finalmente o dia do show chegou!]]
-</tw-passagedata><tw-passagedata pid="5" name="Música Clássica." tags="" position="950,250" size="100,100">&#39;&#39;Era a primeira vez que aconteceria o Festival:&#39;&#39; &lt;&lt;textbox &quot;$Festival&quot; &quot;aluno insere o nome aqui&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Festival to $Festival.trim()&gt;&gt; &lt;&lt;if $Festival is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome do festival. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ aqui em Fortaleza. 
-&#39;&#39;Várias orquestras famosas no mundo todo, além de alguns instrumentistas/cantores com carreira solo, como:&#39;&#39; &lt;&lt;textbox &quot;$Orquestras&quot; &quot;inserir nome de alguns instrumentistas/cantores de quem você gosta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Orquestras to $Orquestras.trim()&gt;&gt; &lt;&lt;if $Orquestras is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque alguns nomes conhecidos. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ foram convidados para fazer parte do evento. 
+</tw-passagedata><tw-passagedata pid="5" name="Música Clássica." tags="" position="950,250" size="100,100">Era a primeira vez que aconteceria o Festival &lt;&lt;textbox &quot;$Festival&quot; &quot;inserir nome do festival&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Festival to $Festival.trim()&gt;&gt; &lt;&lt;if $Festival is &quot;inserir nome do festival&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome do festival. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ aqui em Fortaleza. 
+
+Várias orquestras famosas no mundo todo foram convidadas para fazer parte do evento, além de alguns instrumentistas/cantores com carreira solo, como:
+&lt;&lt;textarea &quot;$Orquestras&quot; &quot;inserir nome de alguns instrumentistas/cantores de quem você gosta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Orquestras to $Orquestras.trim()&gt;&gt; &lt;&lt;if $Orquestras is &quot;inserir nome de alguns instrumentistas/cantores de quem você gosta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque alguns nomes conhecidos. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@
 
 O Festival aconteceria no Teatro José de Alencar, famoso por receber apresentações desse tipo. Provavelmente meus pais não me deixariam ir para o show.
 
@@ -269,9 +269,11 @@ Mesmo assim eu pensei no exato momento em que vi o post: “Não importa como, e
 
 E assim eu fiz.
 
-Conversei com meus pais pedindo permissão para ir ao Festival. Como eu pensei, eles não deixaram. Eles disseram que &lt;&lt;textbox &quot;$Motivos&quot; &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Motivos to $Motivos.trim()&gt;&gt; &lt;&lt;if $Motivos is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque alguns motivos que seus pais diriam para você não ir para algum lugar. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@.
+Conversei com meus pais pedindo permissão para ir ao Festival. Como eu pensei, eles não deixaram. Eles disseram que:
+&lt;&lt;textarea &quot;$Motivos&quot; &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Motivos to $Motivos.trim()&gt;&gt; &lt;&lt;if $Motivos is &quot;inserir alguns motivos que seus pais diriam para você não ir para algum lugar&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque alguns motivos que seus pais diriam para você não ir para algum lugar. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
 
-Pensei em alguma forma de convencê-los a aceitar a minha ideia. Então, pensei que &lt;&lt;textbox &quot;$Responsavel&quot; &quot;inserir nome da pessoa&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Responsavel to $Responsavel.trim()&gt;&gt; &lt;&lt;if $Responsavel is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error4&quot;&gt;&gt;Por favor, coloque alguns motivos que seus pais diriam para você não ir para algum lugar. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error4;@@. poderia me ajudar nessa situação. Ele(ela) já era maior de idade e meus pais o(a) respeitavam bastante. Conversei com ele(ela) e aceitou na hora o meu pedido. Depois, conversamos com meus pais e eles finalmente permitiram que eu fosse, mas eu teria de pagar o que eu precisasse.
+Pensei em alguma forma de convencê-los a aceitar a minha ideia. Então, pensei que &lt;&lt;textbox &quot;$Responsavel&quot; &quot;inserir nome da pessoa&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Responsavel to $Responsavel.trim()&gt;&gt; &lt;&lt;if $Responsavel is &quot;inserir nome da pessoa&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error4&quot;&gt;&gt;Por favor, coloque o nome de alguém. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error4;@@ poderia me ajudar nessa situação. Ele(ela) já era maior de idade e meus pais o(a) respeitavam bastante. Conversei com ele(ela) e aceitou na hora o meu pedido. Depois, conversamos com meus pais e eles finalmente permitiram que eu fosse, mas eu teria de pagar o que eu precisasse.
 
 Resolvi aproveitar que sabia fazer bolos de pote e vender alguns para conseguir dinheiro para ir ao Festival. Depois, vendi os bolinhos para os meus amigos no colégio. Alguns compravam e achavam legal a iniciativa, outros ficavam me zoando, mas continuei e fui guardando o dinheiro que conseguia com as vendas. 
 
@@ -281,7 +283,7 @@ Chegou o dia da compra dos ingressos.
 
 Nesse dia, fiquei freneticamente atualizando a página para não perder a oportunidade de comprar os ingressos nos primeiros lugares, logo em frente ao palco, para assistir ao show. Quase quebrei o botão F5.
 
-&#39;&#39;Outros dois amigos meus,&#39;&#39; &lt;&lt;textbox &quot;$Amigo1&quot; &quot; nome de amigo(a) 1&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Amigo1 to $Amigo1.trim()&gt;&gt; &lt;&lt;if $Amigo1 is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque o nome do seu amigo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@ &#39;&#39;e também o(a),&#39;&#39; &lt;&lt;textbox &quot;$Amigo2&quot; &quot; nome de amigo(a) 2&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Amigo2 to $Amigo2.trim()&gt;&gt; &lt;&lt;if $Amigo2 is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque o nome do seu amigo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@, também fizeram um esforço - pediram aos pais ou venderam alguma coisa - para comprar os ingressos e ir também. Fomos juntos no dia.
+Outros dois amigos meus, &lt;&lt;textbox &quot;$Amigo1&quot; &quot;nome de amigo(a) 1&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Amigo1 to $Amigo1.trim()&gt;&gt; &lt;&lt;if $Amigo1 is &quot;nome de amigo(a) 1&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error5&quot;&gt;&gt;Por favor, coloque o nome do seu amigo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error5;@@ e também o(a) &lt;&lt;textbox &quot;$Amigo2&quot; &quot;nome de amigo(a) 2&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Amigo2 to $Amigo2.trim()&gt;&gt; &lt;&lt;if $Amigo2 is &quot;nome de amigo(a) 2&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error6&quot;&gt;&gt;Por favor, coloque o nome do seu amigo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error6;@@ também fizeram um esforço - pediram aos pais ou venderam alguma coisa - para comprar os ingressos e ir também. Fomos juntos no dia.
 
 [[Finalmente o dia do Festival chegou...]]
 </tw-passagedata><tw-passagedata pid="6" name="Finalmente o dia do show chegou." tags="" position="350,400" size="100,100">&lt;img class=&quot;my-images&quot; src=&quot;https://www.opovo.com.br/noticiasimages/app/noticia_146418291334/2017/02/07/260099/ChaodaPraa_LuizAlves-8.jpg&quot; alt=&quot;Show na Praça Verde&quot;&gt;
@@ -294,13 +296,13 @@ Após uma hora de espera, a banda apareceu e começou o show. Entraram no palco 
 
 Perto do show acabar, eu e meu amigo ficamos meio desconfortáveis por estarmos muito perto das caixas de som. Estávamos com um zumbido no ouvido. Resolvemos também perguntar isso ao outro grupo de como eles estavam se sentindo após o show, quando chegássemos em casa. 
 
-&#39;&#39;Essa sensação de zumbido no ouvido aconteceu provavelmente porque&#39;&#39;
-&lt;&lt;textbox &quot;$Zumbido&quot; &quot;inserir resposta&quot;&gt;&gt;
+Essa sensação de zumbido no ouvido aconteceu provavelmente porque:
+&lt;&lt;textarea &quot;$Zumbido&quot; &quot;inserir resposta&quot;&gt;&gt;
 
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Zumbido to $Zumbido.trim()&gt;&gt;
 
-	&lt;&lt;if $Zumbido is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Zumbido is &quot;inserir resposta&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, diga a sua resposta.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
@@ -315,13 +317,12 @@ Eles começaram tocando forró em um ritmo mais lento, intercalando com uma mús
 
 No final do primeiro show eu estava com muito calor. Resolvemos perguntar ao outro grupo, depois do show, se eles estavam com calor ou cansados. Percebemos que estávamos com bastante calor e um dos nossos amigos sugeriu que saíssemos da área mais lotada onde estávamos para um lugar com menos pessoas.
 
-&#39;&#39;Percebi que isso fazia sentido, porque:&#39;&#39;
-&lt;&lt;textbox &quot;$Resposta&quot; &quot;inserir resposta&quot;&gt;&gt;
-
+Percebi que isso fazia sentido, porque:
+&lt;&lt;textarea &quot;$Resposta&quot; &quot;inserir resposta&quot;&gt;&gt;
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Resposta to $Resposta.trim()&gt;&gt;
 
-	&lt;&lt;if $Resposta is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Resposta is &quot;inserir resposta&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o motivo.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
@@ -363,32 +364,32 @@ Eu falei que senti muito calor no começo do show e, depois de sair da área mai
 
 Todos relataram que ficaram muito suados e sentiram bastante sede em alguns momentos da festa, especialmente nas partes em que o ritmo estava mais acelerado. Concluímos que isso tinha duas causas principais.
 
-&#39;&#39;Uma possível explicação para o excesso de suor seria:&#39;&#39;
-&lt;&lt;textbox &quot;$Suor&quot; &quot;inserir resposta&quot;&gt;&gt;
-
+Uma possível explicação para o excesso de suor seria:
+&lt;&lt;textarea &quot;$Suor&quot; &quot;inserir resposta&quot;&gt;&gt;
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Suor to $Suor.trim()&gt;&gt;
 
-	&lt;&lt;if $Suor is &quot;&quot;&gt;&gt;
-		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, diga-nos a explicação.		  
+	&lt;&lt;if $Suor is &quot;inserir resposta&quot;&gt;&gt;
+		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, diga uma explicação.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@#input-error;@@
 
 
-&#39;&#39;A explicação para a sede era bastante simples:&#39;&#39;
-&lt;&lt;textbox &quot;$Sede&quot; &quot;inserir resposta&quot;&gt;&gt;
-
+A explicação para a sede era bastante simples:
+&lt;&lt;textarea &quot;$Sede&quot; &quot;inserir resposta&quot;&gt;&gt;
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Sede to $Sede.trim()&gt;&gt;
 
-	&lt;&lt;if $Sede is &quot;&quot;&gt;&gt;
-		&lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, explique melhor.		  
+	&lt;&lt;if $Sede is &quot;inserir resposta&quot;&gt;&gt;
+		&lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, diga uma possível explicação.		  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@#input-error2;@@
 
-Depois, comentamos sobre os diferentes modos de dançar. Alguns dos meus amigos que estavam lá comentaram que aparentemente sentiram menos calor comparado a outras pessoas, por exemplo, do que eu e a pessoa que dançou comigo. Nós permanecemos juntos do começo ao fim da festa. &#39;&#39;Desconsiderando as diferenças no metabolismo de cada um, concluímos que uma possível explicação seria:&#39;&#39; &lt;&lt;textbox &quot;$Metabolismo&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Metabolismo to $Metabolismo.trim()&gt;&gt; &lt;&lt;if $Metabolismo is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, diga-nos a possível explicação. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
+Depois, comentamos sobre os diferentes modos de dançar. Alguns dos meus amigos que estavam lá comentaram que aparentemente sentiram menos calor comparado a outras pessoas, por exemplo, do que eu e a pessoa que dançou comigo. Nós permanecemos juntos do começo ao fim da festa. Desconsiderando as diferenças no metabolismo de cada um, concluímos que uma possível explicação seria:
+&lt;&lt;textarea &quot;$Metabolismo&quot; &quot;inserir resposta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Metabolismo to $Metabolismo.trim()&gt;&gt; &lt;&lt;if $Metabolismo is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, diga uma possível explicação. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
 </tw-passagedata><tw-passagedata pid="10" name="Achei o suficiente, pois nós dois iríamos rachar o valor do uber e talvez voltaríamos pra casa de ônibus mesmo, de manhã." tags="" position="550,400" size="100,100">&lt;img class=&quot;my-images&quot; src=&quot;https://cdn.brasildefato.com.br/media/488c7a409091302e95219df977bb5d92.jpeg&quot; alt=&quot;Palco no aterro da Praia de Iracema&quot;&gt;
 
 No final das contas, fomos eu, &lt;&lt;print $Nome&gt;&gt; e mais dois amigos juntos para o show.
@@ -397,40 +398,44 @@ Ao chegarmos no Aterro, eu e a(o) &lt;&lt;print $Nome&gt;&gt; fomos procurar um 
 
 Perguntei para &lt;&lt;print $Nome&gt;&gt; a respeito disso. 
 
-&#39;&#39;Ele(a), muito nerd, respondeu na hora que isso acontecia devido a:&#39;&#39;
-&lt;&lt;textbox &quot;$Fenonemo&quot; &quot;inserir resposta&quot;&gt;&gt;
+Ele(a), muito nerd, respondeu na hora que isso acontecia devido a:
+&lt;&lt;textarea &quot;$Fenonemo&quot; &quot;inserir resposta&quot;&gt;&gt;
 
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $Fenonemo to $Fenonemo.trim()&gt;&gt;
 
-	&lt;&lt;if $Fenonemo is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $Fenonemo is &quot;inserir resposta&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome do fenômeno.	  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@#input-error;@@
  
-&#39;&#39;Esse fenômeno acontece porque:&#39;&#39;
-&lt;&lt;textbox &quot;$MotivoFenonemo&quot; &quot;inserir resposta&quot;&gt;&gt;
+Esse fenômeno acontece porque:
+&lt;&lt;textarea &quot;$MotivoFenonemo&quot; &quot;inserir resposta&quot;&gt;&gt;
 
 &lt;&lt;button &quot;Continuar&quot;&gt;&gt;
 	&lt;&lt;set $MotivoFenonemo to $MotivoFenonemo.trim()&gt;&gt;
 
-	&lt;&lt;if $MotivoFenonemo is &quot;&quot;&gt;&gt;
+	&lt;&lt;if $MotivoFenonemo is &quot;inserir resposta&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque o motivo do fenômeno acontecer.	  
 &lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@#input-error2;@@
 
-&#39;&#39;Depois de um tempo, senti bastante frio, olhei para o meu braço e percebi que os pelos estavam:&#39;&#39; &lt;&lt;textbox &quot;$Arrepiado&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Arrepiado to $Arrepiado.trim()&gt;&gt; &lt;&lt;if $Arrepiado is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque como os seus pelos estavam. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@ Eu lembro que tinha visto o motivo disso acontecer na escola, mas tinha esquecido. Pensei em perguntar também a respeito disso, mas o pessoal chegou na hora. Logo em seguida, o show começou; parecia que estavam esperando a chegada deles. 
+Depois de um tempo, senti bastante frio, olhei para o meu braço e percebi que os pelos estavam: &lt;&lt;textbox &quot;$Arrepiado&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Arrepiado to $Arrepiado.trim()&gt;&gt; &lt;&lt;if $Arrepiado is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque como os seus pelos estavam. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@ Eu lembro que tinha visto o motivo disso acontecer na escola, mas tinha esquecido. Pensei em perguntar também a respeito disso, mas o pessoal chegou na hora. Logo em seguida, o show começou; parecia que estavam esperando a chegada deles. 
 
 &lt;&lt;print $NomeBanda&gt;&gt; começou a tocar. Ficava alternando de uma música mais lenta para uma música um pouco mais rítmica. Formamos pares para a dança. Eu com &lt;&lt;print $Nome&gt;&gt; e os outros dois amigos. Vimos que dançávamos em ritmos diferentes, tendo algumas vezes mudanças em quem ditava o ritmo da dança, dependendo de como era a música. Resolvemos depois nos perguntar também sobre esse fato, pois era bastante interessante a mudança no decorrer da dança.
 
 Após uma longa noite dançando ao som do &lt;&lt;print $NomeBanda&gt;&gt;, resolvemos descansar um pouco perto do mar, já que estávamos na praia. Com a brisa bem refrescante, por estar um pouco fria, percebemos uma diferença nas temperaturas da água do mar, da brisa e da areia.
 
 [[Depois de descansarmos na brisa do mar, resolvemos ir para casa, pois já estava amanhecendo.]]
-</tw-passagedata><tw-passagedata pid="11" name="Depois de descansarmos na brisa do mar, resolvemos ir para casa, pois já estava amanhecendo." tags="" position="550,550" size="100,100">No outro dia conversamos um pouco sobre o que aconteceu no show. Ao dançarmos, vimos que as vezes mudamos nosso ritmo de quem liderava a dança. &#39;&#39;Vimos que isso é ocasionado pela a interferência dos ritmos:&#39;&#39; &lt;&lt;textbox &quot;$Ritmo&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Ritmo to $Ritmo.trim()&gt;&gt; &lt;&lt;if $Ritmo is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da interferência. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ roporcionam um maior gasto energético, consequentemente, um aquecimento corporal maior; &#39;&#39;Já os ritmos mais:&#39;&#39; &lt;&lt;textbox &quot;$Ritmo2&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Ritmo2 to $Ritmo2.trim()&gt;&gt; &lt;&lt;if $Ritmo2 is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque o nome do ritmo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ proporcionam o menor gasto energético, consequentemente, um aquecimento corporal menor. 
+</tw-passagedata><tw-passagedata pid="11" name="Depois de descansarmos na brisa do mar, resolvemos ir para casa, pois já estava amanhecendo." tags="" position="550,550" size="100,100">No outro dia conversamos um pouco sobre o que aconteceu no show. Ao dançarmos, vimos que as vezes mudamos nosso ritmo de quem liderava a dança. Vimos que isso é ocasionado pela interferência dos ritmos: ritmos &lt;&lt;textbox &quot;$Ritmo&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Ritmo to $Ritmo.trim()&gt;&gt; &lt;&lt;if $Ritmo is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque o nome da interferência. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ proporcionam um maior gasto energético, consequentemente, um aquecimento corporal maior; já os ritmos mais &lt;&lt;textbox &quot;$Ritmo2&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Ritmo2 to $Ritmo2.trim()&gt;&gt; &lt;&lt;if $Ritmo2 is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque o nome do ritmo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ proporcionam menor gasto energético, consequentemente, um aquecimento corporal menor. 
 
-Também conversamos sobre como a água do mar, a brisa e a areia tinham temperaturas diferentes no mesmo ambiente. &#39;&#39;No caso da areia e da água do mar, a água do mar estava mais quente do que a areia porque:&#39;&#39; &lt;&lt;textbox &quot;$Areia&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Areia to $Areia.trim()&gt;&gt; &lt;&lt;if $Areia is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque o motivo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@. &#39;&#39;Enquanto a brisa é formada pelo fenômeno da:&#39;&#39; &lt;&lt;textbox &quot;$Brisa&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Brisa to $Brisa.trim()&gt;&gt; &lt;&lt;if $Brisa is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque o motivo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@, que ocorre a partir da rotação do ar quente e do ar frio que está acontecendo na praia.</tw-passagedata><tw-passagedata pid="12" name="Finalmente o dia do Festival chegou..." tags="" position="950,400" size="100,100">&lt;img class=&quot;my-images&quot; src=&quot;https://www.secult.ce.gov.br/wp-content/uploads/sites/43/2020/02/Fachada-Vitral-Gentil-Barreira-1200x880.jpg&quot; alt=&quot;Fachada do Theatro José de Alencar&quot;&gt;
+Também conversamos sobre como a água do mar, a brisa e a areia tinham temperaturas diferentes no mesmo ambiente. No caso da areia e da água do mar, a água do mar estava mais quente do que a areia porque:
+&lt;&lt;textarea &quot;$Areia&quot; &quot;inserir resposta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Areia to $Areia.trim()&gt;&gt; &lt;&lt;if $Areia is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, coloque o motivo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
+
+Enquanto a brisa é formada pelo fenômeno da &lt;&lt;textbox &quot;$Brisa&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Brisa to $Brisa.trim()&gt;&gt; &lt;&lt;if $Brisa is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error4&quot;&gt;&gt;Por favor, coloque o motivo. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error4;@@, que ocorre a partir da rotação do ar quente e do ar frio que está acontecendo na praia.</tw-passagedata><tw-passagedata pid="12" name="Finalmente o dia do Festival chegou..." tags="" position="950,400" size="100,100">&lt;img class=&quot;my-images&quot; src=&quot;https://www.secult.ce.gov.br/wp-content/uploads/sites/43/2020/02/Fachada-Vitral-Gentil-Barreira-1200x880.jpg&quot; alt=&quot;Fachada do Theatro José de Alencar&quot;&gt;
 
 Ao chegarmos, ficamos imediatamente deslumbrados com o local. O Theatro José de Alencar era um prédio de três andares com estrutura de ferro - que se retorcia como vinhas de plantas ao longo dos corrimões, parapeitos e postes - e vitrais coloridos.
 
@@ -444,19 +449,28 @@ Dentro da sala de espetáculos, a sensação de estar em um filme de época só 
 
 Sentamos e ficamos conversando até que finalmente as cortinas vermelhas se abriram.
 
-&#39;&#39;O primeiro concerto foi de:&#39;&#39; &lt;&lt;textbox &quot;$Artista&quot; &quot;inserir instrumentista ou algum nome de orquestra&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Artista to$Artista.trim()&gt;&gt; &lt;&lt;if $Artista is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, cite algum instrumentista ou nome de orquestra. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ 
-&#39;&#39;As composições tocadas foram de alguns clássicos dos compositores internacionais mais conhecidos, como por exemplo:&#39;&#39; &lt;&lt;textbox &quot;$Composicao&quot; &quot;cite algumas composições das quais você gosta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Composicao to$Composicao.trim()&gt;&gt; &lt;&lt;if $Composicao is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, cite algumas composições das quais você gosta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ &#39;&#39;Também foram apresentadas alguns trechos de composições de autores brasileiros, como:&#39;&#39; &lt;&lt;textbox &quot;$Autores&quot; &quot;cite alguns compositores nacionais&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Autores to$Autores.trim()&gt;&gt; &lt;&lt;if $Autores is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, cite alguns compositores nacionais. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@
+O primeiro concerto foi de &lt;&lt;textbox &quot;$Artista&quot; &quot;inserir instrumentista ou algum nome de orquestra&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Artista to $Artista.trim()&gt;&gt; &lt;&lt;if $Artista is &quot;inserir instrumentista ou algum nome de orquestra&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, cite algum instrumentista ou nome de orquestra. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@ 
+As composições tocadas foram de alguns clássicos dos compositores internacionais mais conhecidos, como por exemplo:
+&lt;&lt;textarea &quot;$Composicao&quot; &quot;cite algumas composições das quais você gosta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Composicao to $Composicao.trim()&gt;&gt; &lt;&lt;if $Composicao is &quot;cite algumas composições das quais você gosta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, cite algumas composições das quais você gosta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@
+
+Também foram apresentadas alguns trechos de composições de autores brasileiros, como:
+&lt;&lt;textarea &quot;$Autores&quot; &quot;cite alguns compositores nacionais&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Autores to $Autores.trim()&gt;&gt; &lt;&lt;if $Autores is &quot;cite alguns compositores nacionais&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, cite alguns compositores nacionais. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@
 
 A apresentação foi maravilhosa. Já conhecia algumas das composições apresentadas, mas a execução tinha algo diferente de tudo o que ouvi antes. Foi impressionante perceber que as apresentações ao vivo possuem algo especial em relação às gravações disponíveis na internet.
 
-&#39;&#39;Depois, os próximos a tocar fizeram apresentações temáticas. Uma delas tocou trilhas sonoras de jogos bastante conhecidos, como:&#39;&#39; &lt;&lt;textbox &quot;$Jogos&quot; &quot;cite alguns jogos de que você gosta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Jogos to$Jogos.trim()&gt;&gt; &lt;&lt;if $Jogos is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, cite alguns jogos de que você gosta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@
-&#39;&#39;Gostei bastante quando tocaram uma das músicas do jogo:&#39;&#39; &lt;&lt;textbox &quot;$Jogos2&quot; &quot;cite um dos jogos já listados por você ou outro de que você goste bastante&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Jogos2 to$Jogos2.trim()&gt;&gt; &lt;&lt;if $Jogos2 is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, cite um dos jogos já listados por você ou outro de que você goste bastante. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@
+Depois, os próximos a tocar fizeram apresentações temáticas. Uma delas tocou trilhas sonoras de jogos bastante conhecidos, como:
+&lt;&lt;textarea &quot;$Jogos&quot; &quot;cite alguns jogos de que você gosta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Jogos to $Jogos.trim()&gt;&gt; &lt;&lt;if $Jogos is &quot;cite alguns jogos de que você gosta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error4&quot;&gt;&gt;Por favor, cite alguns jogos de que você gosta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error4;@@
+
+Gostei bastante quando tocaram uma das músicas do jogo &lt;&lt;textbox &quot;$Jogos2&quot; &quot;cite um dos jogos já listados por você ou outro de que você goste bastante&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Jogos2 to $Jogos2.trim()&gt;&gt; &lt;&lt;if $Jogos2 is &quot;cite um dos jogos já listados por você ou outro de que você goste bastante&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error5&quot;&gt;&gt;Por favor, cite um dos jogos já listados por você ou outro de que você goste bastante. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error5;@@
 
 Por um instante, foi como se eu fosse transportado para o mundo daquele jogo.
 
 A nostalgia foi bem forte; inclusive, os meus amigos também comentaram a mesma coisa. Eles se lembraram dos momentos em que jogamos juntos, algo do qual falamos muito a respeito depois da apresentação.
 
-A apresentação seguinte tocou, além de alguns clássicos, trilhas sonoras de desenhos bastante conhecidos. &#39;&#39;Foi muito bom! Em uma das músicas, a abertura de:&#39;&#39; &lt;&lt;textbox &quot;$Abertura&quot; &quot;cite algum desenho/anime de que você gosta bastante&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Abertura to$Abertura.trim()&gt;&gt; &lt;&lt;if $Abertura is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error3&quot;&gt;&gt;Por favor, cite algum desenho/anime de que você gosta bastante &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error3;@@ todos cantaram juntos. Os instrumentistas até repetiram o refrão e depois todos continuaram a cantar à capella. 
+A apresentação seguinte tocou, além de alguns clássicos, trilhas sonoras de desenhos bastante conhecidos. Foi muito bom! Em uma das músicas, a abertura de &lt;&lt;textbox &quot;$Abertura&quot; &quot;cite algum desenho/anime de que você gosta bastante&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Abertura to $Abertura.trim()&gt;&gt; &lt;&lt;if $Abertura is &quot;cite algum desenho/anime de que você gosta bastante&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error6&quot;&gt;&gt;Por favor, cite algum desenho/anime de que você gosta bastante. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error6;@@, todos cantaram juntos. Os instrumentistas até repetiram o refrão e depois todos continuaram a cantar à capella. 
 
 Nossa, aquilo foi mágico!
 
@@ -467,12 +481,16 @@ Logo pensei: “Como será que as pessoas conseguiam ouvir, mesmo estando tão l
 
 Depois do show, conversei com meus amigos sobre isso. Um deles lembrou de uma aula de Física, em que o professor falou alguma coisa a respeito disso. Infelizmente, ele não lembrava exatamente da explicação dada nessa aula. 
 
-&#39;&#39;Pesquisamos na internet e vimos que isso poderia estar ligado a&#39;&#39; &lt;&lt;textbox &quot;$RespostaAleatoria&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Amigo1 to $RespostaAleatoria.trim()&gt;&gt; &lt;&lt;if $RespostaAleatoria is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque sua resposta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@
+Pesquisamos na internet e vimos que isso poderia estar ligado a:
+&lt;&lt;textarea &quot;$RespostaAleatoria&quot; &quot;inserir resposta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $RespostaAleatoria to $RespostaAleatoria.trim()&gt;&gt; &lt;&lt;if $RespostaAleatoria is &quot;inserir resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error&quot;&gt;&gt;Por favor, coloque sua resposta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error;@@
 
-Um dos meus amigos percebeu que aparentemente os instrumentos tocavam um som muito parecido, mas cada um de um jeito próprio, em alguns momentos ao longo da composição. Eu expliquei que ele provavelmente estava se referindo a tocar as mesmas notas musicais, mas de uma forma própria. Isso é causado pelo &lt;&lt;textbox &quot;$resposta&quot; &quot;inserir resposta&quot; autofocus&gt;&gt; &lt;span id=&quot;resposta&quot;&gt;&lt;/span&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $resposta to $resposta.trim()&gt;&gt; &lt;&lt;if $resposta isnot &quot;timbre&quot;&gt;&gt; &lt;&lt;replace &quot;#resposta&quot;&gt;&gt; Tente de novo. Escreva tudo minúsculo. &lt;&lt;/replace&gt;&gt; &lt;&lt;else&gt;&gt; &lt;&lt;replace &quot;#resposta&quot;&gt;&gt; Muito bem! &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt; de cada instrumento. 
+Um dos meus amigos percebeu que aparentemente os instrumentos tocavam um som muito parecido, mas cada um de um jeito próprio, em alguns momentos ao longo da composição. Eu expliquei que ele provavelmente estava se referindo a tocar as mesmas notas musicais, mas de uma forma própria. Isso é causado pelo &lt;&lt;textbox &quot;$resposta&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;span id=&quot;resposta&quot;&gt;&lt;/span&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $resposta to $resposta.trim()&gt;&gt; &lt;&lt;if $resposta isnot &quot;timbre&quot;&gt;&gt; &lt;&lt;replace &quot;#resposta&quot;&gt;&gt; Tente de novo. Escreva tudo minúsculo. &lt;&lt;/replace&gt;&gt; &lt;&lt;else&gt;&gt; &lt;&lt;replace &quot;#resposta&quot;&gt;&gt; Muito bem! &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt; de cada instrumento. 
 
-Inclusive esse mesmo conceito se aplica às nossas vozes. Cada um de nós tem um &lt;&lt;textbox &quot;$resposta2&quot; &quot;inserir resposta&quot; autofocus&gt;&gt; &lt;span id=&quot;resposta2&quot;&gt;&lt;/span&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $resposta2 to $resposta2.trim()&gt;&gt; &lt;&lt;if $resposta2 isnot &quot;timbre&quot;&gt;&gt; &lt;&lt;replace &quot;#resposta2&quot;&gt;&gt; Tente de novo. Escreva tudo minúsculo. &lt;&lt;/replace&gt;&gt; &lt;&lt;else&gt;&gt; &lt;&lt;replace &quot;#resposta2&quot;&gt;&gt; Muito bem! &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt; único. Descobri também, depois de olhar na internet e perguntar a um professor, que escutamos nossa voz de forma diferente da que os outros a ouvem.
-&#39;&#39;Isso está relacionado a:&#39;&#39; &lt;&lt;textbox &quot;$Relacionado&quot; &quot;insira uma resposta aqui&quot;&gt;&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Relacionado to $Relacionado.trim()&gt;&gt; &lt;&lt;if $Relacionado is &quot;&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque sua resposta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ 
+Inclusive esse mesmo conceito se aplica às nossas vozes. Cada um de nós tem um &lt;&lt;textbox &quot;$resposta2&quot; &quot;inserir resposta&quot;&gt;&gt; &lt;span id=&quot;resposta2&quot;&gt;&lt;/span&gt; &lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $resposta2 to $resposta2.trim()&gt;&gt; &lt;&lt;if $resposta2 isnot &quot;timbre&quot;&gt;&gt; &lt;&lt;replace &quot;#resposta2&quot;&gt;&gt; Tente de novo. Escreva tudo minúsculo. &lt;&lt;/replace&gt;&gt; &lt;&lt;else&gt;&gt; &lt;&lt;replace &quot;#resposta2&quot;&gt;&gt; Muito bem! &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt; único. Descobri também, depois de olhar na internet e perguntar a um professor, que escutamos nossa voz de forma diferente da que os outros a ouvem.
+Isso está relacionado a:
+&lt;&lt;textarea &quot;$Relacionado&quot; &quot;insira uma resposta&quot;&gt;&gt;
+&lt;&lt;button &quot;Continuar&quot;&gt;&gt; &lt;&lt;set $Relacionado to $Relacionado.trim()&gt;&gt; &lt;&lt;if $Relacionado is &quot;insira uma resposta&quot;&gt;&gt; &lt;&lt;replace &quot;#input-error2&quot;&gt;&gt;Por favor, coloque sua resposta. &lt;&lt;/replace&gt;&gt; &lt;&lt;/if&gt;&gt; &lt;&lt;/button&gt;&gt;@@#input-error2;@@ 
 
 De toda forma, a noite foi maravilhosa. Ficamos ansiosos para a próxima edição do Festival, marcada para o ano seguinte.</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
